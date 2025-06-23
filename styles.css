@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(204, 206, 185);
+    font-family: Georgia;
+    font-size: 15px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+body {
+    margin-bottom: 400px;
+}
+
+article {
+    margin-bottom: 40px;
+}

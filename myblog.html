@@ -5,5 +5,42 @@
     <meta charset="UTF-8"/>
     <meta name="viewport", content="width=device-width, initial-scale=1.0" />
     <title>Web Blog</title>
-    <link rel="stylesheets" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
+
+<body>
+    <h1>Making the REST API</h1>
+
+    <h2>The Controller</h2>
+
+        <article>
+        <h3>The imports & constants of the REST API</h3>
+        <img src="blog images/1.PNG">
+        <ul>
+            <li>import dotenv/config is used so that we can access process.env.PORT which tells the file
+                which port to listen on (env in separate file for securty)
+            </li>
+            <li>second line imports Express, it's used to create web server and handle HTTP 
+                requests and responses (user inputs, displaying stuff, routing, etc). Handles the post, get,
+                put, delete HTTP requests. Also handles middleware for parsing JSON, logging, authentication, etc. 
+            </li>
+            <li>
+                ascynHandler is used so that we don't need to write a try and else block of code
+                in every async route, it automatically catches errors and passes them to Express's built in error handler  
+            </li>
+            <li>
+                The * means import everything that module exports as exercises in this case. When we want to call on a 
+                function we do exercises.nameoffunction. 
+            </li>
+            <p>Note: constant for app is needed because the express() doesn't take any parameters. 
+            Can't use express().get, have to define it first like app.get
+            </p>
+        </ul>
+        </article>
+
+        <article>
+            <h3>The use and listen functions of Express</h3>
+            <img src="blog images/2.PNG">
+        </article>
+
+</body>
