@@ -33,7 +33,7 @@
                 function we do exercises.nameoffunction. 
             </li>
             <p>Note: constant for app is needed because the express() doesn't take any parameters. 
-            Can't use express().get, have to define it first like app.get
+            Can't use express().get, have to define it first to then use app.get
             </p>
         </ul>
         </article>
@@ -41,6 +41,17 @@
         <article>
             <h3>The use and listen functions of Express</h3>
             <img src="blog images/2.PNG">
+            <p>app.use is calling on an Express function "use" that registers middleware. It runs on
+               every request because it doesn't have a route. If we said app.use('/api') then it only 
+               runs on URL starts with /api. The express.json() is a middleware that helps parse incoming
+               JSON data in request body (it converts it into a JS object so computer understands).
+            </p>
+            <p>The listen function in Express takes in parameter PORT which we defined earlier. The 
+                async 
+            </p>
+            <p>Note: middleware refers to functions that runs during execution of a request and parsing
+               means converting data from one format to another.
+            </p>
         </article>
 
 </body>
