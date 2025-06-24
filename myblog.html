@@ -16,26 +16,34 @@
         <article>
         <h3>The imports & constants of the REST API</h3>
         <img src="blog images/1.PNG">
-        <ul>
-            <li>import dotenv/config is used so that we can access process.env.PORT which tells the file
-                which port to listen on (env in separate file for securty)
-            </li>
-            <li>second line imports Express, it's used to create web server and handle HTTP 
-                requests and responses (user inputs, displaying stuff, routing, etc). Handles the post, get,
-                put, delete HTTP requests. Also handles middleware for parsing JSON, logging, authentication, etc. 
-            </li>
-            <li>
+        <section>
+            <p>
+                The line import 'dotenv/config' is a importation of a file from the path dotenv/config. When we use
+                the package dotenv, it contains the .env file. In this project it contains the MONGODB connect string
+                and the PORT value. Later on we access that PORT value by doing const PORT = process.env.PORT. The 
+                purpose of a separate env file from the controller is for security purposes. 
+
+            </p>
+            <p>
+                Import Express is used to create web server and handle HTTP requests and responses 
+                (user inputs, displaying stuff, routing, etc). Handles the post, get, put, delete HTTP requests.
+                Also handles middleware for parsing JSON, logging, authentication, etc. 
+
+            </p>
+            <p>
                 ascynHandler is used so that we don't need to write a try and else block of code
-                in every async route, it automatically catches errors and passes them to Express's built in error handler  
-            </li>
-            <li>
+                in every async route, it automatically catches errors and passes them to Express's built in error handler. Used in 
+                all of our HTTPS requests to save time.  
+            </p>
+            <p>
                 The * means import everything that module exports as exercises in this case. When we want to call on a 
-                function we do exercises.nameoffunction. 
-            </li>
+                function we do exercises.nameoffunction. Tells us which file we're using, the custom name referring to all exports, 
+                and which function we're using. 
+            </p>
             <p>Note: constant for app is needed because the express() doesn't take any parameters. 
             Can't use express().get, have to define it first to then use app.get
             </p>
-        </ul>
+        </section>
         </article>
 
         <article>
@@ -43,15 +51,45 @@
             <img src="blog images/2.PNG">
             <p>app.use is calling on an Express function "use" that registers middleware. It runs on
                every request because it doesn't have a route. If we said app.use('/api') then it only 
-               runs on URL starts with /api. The express.json() is a middleware that helps parse incoming
-               JSON data in request body (it converts it into a JS object so computer understands).
+               runs on URL that starts with /api. <b>The express.json() is a middleware that helps parse incoming
+               JSON data in request body into a JS object </b>(it converts it into a JS object so computer understands).
             </p>
-            <p>The listen function in Express takes in parameter PORT which we defined earlier. The 
-                async 
+            <p>The listen function in Express takes in parameter PORT (which we defined earlier). The 
+                async is a important keyword used when we want asynchronous code to behave like synchronous code.
+                The async returns a promise and the await keyword pauses the execution of the async function that 
+                contains it. This is helpful because other code of the program can be run during this time, <b>other code 
+                outside the function can continue executing</b>. Gives a illusion of synchronous, but is actually asynchronous under the hood. 
             </p>
             <p>Note: middleware refers to functions that runs during execution of a request and parsing
                means converting data from one format to another.
             </p>
         </article>
-
+        
+        <article>
+            <h3>Understanding the CRUD operations</h3>
+            <ul>
+                <h4>Create</h4>
+                <li>HTTP Method: POST</li>
+                <li>Purpose: Create a new resource (data) on the server</li>
+                <li>Example: Making a new entry for user's new PR exercise in a exercise app</li>
+            </ul>
+            <ul>
+                <h4>Read</h4>
+                <li>HTTPS Method: GET</li>
+                <li>Purpose: Retrieve data or fetch data from server.</li>
+                <li>Example: Getting data of all users or getting a specific user by ID</li>
+            </ul>
+            <ul>
+                <h4>Update</h4>
+                <li>HTTP Method: Update</li>
+                <li>Purpose: Change old data entry into new data entry using user's inputs.</li>
+                <li>Example: Modifying old PR exercise record for squats</li>
+            </ul>
+            <ul>
+                <h4>Delete</h4>
+                <li>HTTP Method: Delete</li>
+                <li>Purpose: Removing old data entry inputted by user.</li>
+                <li>Example: Removing old PR exercise entry.</li>
+            </ul>
+        </article>
 </body>
