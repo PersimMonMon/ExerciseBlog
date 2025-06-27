@@ -24,3 +24,21 @@ article {
     margin: 0 auto;
 }
 
+textarea {
+    width: 530px;
+    height: 340px;
+    resize: none;
+    font-size: 17px;
+    display: inline-block
+}
+
+#post-answer {
+    display: inline-block;
+    max-width: 580px;
+}
+
+.overlay {
+    background-color: black;
+    max-width: 580px;
+    display: inline-block;
+}

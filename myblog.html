@@ -11,10 +11,8 @@
 <body>
     <h1>Making the REST API</h1>
 
-    <h2>The Controller</h2>
-
         <article>
-        <h3>The imports & constants of the REST API</h3>
+        <h2>The imports & constants of the REST API</h2>
         <img src="blog images/1.PNG">
         <section>
             <p>
@@ -47,7 +45,7 @@
         </article>
 
         <article>
-            <h3>The use and listen functions of Express</h3>
+            <h2>The use and listen functions of Express</h2>
             <img src="blog images/2.PNG">
             <p>app.use is calling on an Express function "use" that registers middleware. It runs on
                every request because it doesn't have a route. If we said app.use('/api') then it only 
@@ -66,7 +64,7 @@
         </article>
         
         <article>
-            <h3>Understanding the CRUD operations</h3>
+            <h2>Understanding the CRUD operations</h2>
 
             <h4>Create</h4>
             <ul>
@@ -105,4 +103,21 @@
                 </section>
             </ul>
         </article>
+
+        <article>
+            <h2>How to Create a Post Request</h2>
+            <p>When a user enters inputs into a text box, they get sent to the server. How the server 
+               get these values is through using req.body. And the app.use(express.json()) allows us to convert
+               the data given by user into a JSON object, making it accessible via req.body. Also consider any
+               limitations the inputs should have, if there's any, define them first. We assure these limits by
+               the usage of typeof in a if statement.  
+            </p>
+        </article>
+
+        <div id="post-practice">
+            <textarea></textarea>
+            <div class="overlay">
+                <img id="post-answer" src="blog images/3.PNG">
+            </div>
+        </div>
 </body>
