@@ -16,7 +16,10 @@ body {
 article {
     margin: 0 auto;
     max-width: 600px;
-    
+}
+
+.article-p {
+    text-align: left;
 }
 
 .crud {
@@ -32,7 +35,11 @@ textarea {
     display: inline-block
 }
 
-#post-answer {
+.request-practice {
+    margin-top: 20px;
+}
+
+.post-answer {
     display: inline-block;
     max-width: 580px;
 }

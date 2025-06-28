@@ -15,30 +15,30 @@
         <h2>The imports & constants of the REST API</h2>
         <img src="blog images/1.PNG">
         <section>
-            <p>
+            <p class="article-p">
                 The line import 'dotenv/config' is a importation of a file from the path dotenv/config. When we use
                 the package dotenv, it contains the .env file. In this project it contains the MONGODB connect string
                 and the PORT value. Later on we access that PORT value by doing const PORT = process.env.PORT. The 
                 purpose of a separate env file from the controller is for security purposes. 
 
             </p>
-            <p>
+            <p class="article-p">
                 Import Express is used to create web server and handle HTTP requests and responses 
                 (user inputs, displaying stuff, routing, etc). Handles the post, get, put, delete HTTP requests.
                 Also handles middleware for parsing JSON, logging, authentication, etc. 
 
             </p>
-            <p>
+            <p class="article-p">
                 ascynHandler is used so that we don't need to write a try and else block of code
                 in every async route, it automatically catches errors and passes them to Express's built in error handler. Used in 
                 all of our HTTPS requests to save time.  
             </p>
-            <p>
+            <p class="article-p">
                 The * means import everything that module exports as exercises in this case. When we want to call on a 
                 function we do exercises.nameoffunction. Tells us which file we're using, the custom name referring to all exports, 
                 and which function we're using. 
             </p>
-            <p>Note: constant for app is needed because the express() doesn't take any parameters. 
+            <p class="article-p">Note: constant for app is needed because the express() doesn't take any parameters. 
             Can't use express().get, have to define it first to then use app.get
             </p>
         </section>
@@ -47,18 +47,19 @@
         <article>
             <h2>The use and listen functions of Express</h2>
             <img src="blog images/2.PNG">
-            <p>app.use is calling on an Express function "use" that registers middleware. It runs on
+            <p class="article-p">app.use is calling on an Express function "use" that registers middleware. It runs on
                every request because it doesn't have a route. If we said app.use('/api') then it only 
                runs on URL that starts with /api. <b>The express.json() is a middleware that helps parse incoming
                JSON data in request body into a JS object </b>(it converts it into a JS object so computer understands).
             </p>
-            <p>The listen function in Express takes in parameter PORT (which we defined earlier). The 
+            <p class="article-p">The listen function in Express takes in parameter PORT (which we defined earlier) to start the server.
+                Once the server starts, it can then wait for HTTP requests and respond to them. The 
                 async is a important keyword used when we want asynchronous code to behave like synchronous code.
                 The async returns a promise and the await keyword pauses the execution of the async function that 
                 contains it. This is helpful because other code of the program can be run during this time, <b>other code 
                 outside the function can continue executing</b>. Gives a illusion of synchronous, but is actually asynchronous under the hood. 
             </p>
-            <p>Note: middleware refers to functions that runs during execution of a request and parsing
+            <p class="article-p">Note: middleware refers to functions that runs during execution of a request and parsing
                means converting data from one format to another.
             </p>
         </article>
@@ -106,7 +107,7 @@
 
         <article>
             <h2>How to Create a Post Request</h2>
-            <p>When a user enters inputs into a text box, they get sent to the server. How the server 
+            <p class="article-p">When a user enters inputs into a text box, they get sent to the server. How the server 
                get these values is through using req.body. And the app.use(express.json()) allows us to convert
                the data given by user into a JSON object, making it accessible via req.body. Also consider any
                limitations the inputs should have, if there's any, define them first. We assure these limits by
@@ -114,11 +115,17 @@
             </p>
         </article>
 
-        <div id="post-practice">
+        <div class="request-practice">
+            <h4>Try writing the Post Request below. Hover over the black screen to reveal the answer.</h4>
             <textarea></textarea>
             <div class="image-wrapper">
-                <img id="post-answer" src="blog images/3.PNG">
+                <img class="post-answer" src="blog images/3.PNG">
                 <div class="overlay"></div>
             </div>
         </div>
+
+        <article>
+            <h2>How to Create a Get Request</h2>
+            <p class="article-p"></p>
+        </article>
 </body>
