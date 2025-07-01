@@ -39,9 +39,10 @@ textarea {
     margin-top: 20px;
 }
 
-.post-answer {
+.answer {
     display: inline-block;
     max-width: 580px;
+    height: 346px;
 }
 
 .image-wrapper {
