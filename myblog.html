@@ -111,7 +111,7 @@
         <article>
             <h2>How to Create a Post Request</h2>
             <p class="article-p">
-               When a user enters inputs into a text box, they get sent to the server. How the server 
+               When a user enters inputs into a text box, the data gets sent to the server. How the server 
                get these values is through using req.body. And the app.use(express.json()) allows us to convert
                the data given by user into a JSON object, making it accessible via req.body. Also consider any
                limitations the inputs should have, if there's any, define them first. We assure these limits by
@@ -120,7 +120,7 @@
         </article>
 
         <div class="request-practice">
-            <h4>Try writing the Post Request below. Hover over the black screen to reveal the answer.</h4>
+            <h4>Try writing the Post Request below in the white box. Hover over the black screen to reveal the answer.</h4>
             <textarea></textarea>
             <div class="image-wrapper">
                 <img class="post-answer" src="blog images/3.PNG">
@@ -144,7 +144,23 @@
             </p>
             <p class="article-p">
                 The important of importing 'dotenv/config' is not to start the server, but to instead connect
-                to it. We need to connect to the database in order to access our data.
+                to it. We need to connect to the database in order to access our data by using built in functions of mongoose.
+            </p>
+        </article>
+
+        <article>
+            <h2>How to Connect to Mongoose</h2>
+            <p class="article-p">Here's a example of using mongoose connect function taken from mongoosejs.com:</p>
+            <img src="blog images/5.PNG">
+            <p class="article-p">
+                The example above connects to the database and uses a catch error. For our project, we want
+                to do the same thing but protect our database password and API keys out of our source code.
+                Try implementing this using the <b>process</b> core module of Node.js which provides the env property
+                that holds/hosts all environment variables.
+            </p>
+                Note: process is a global variable
+            <p>
+                
             </p>
         </article>
 </body>
