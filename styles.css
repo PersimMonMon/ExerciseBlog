@@ -25,6 +25,7 @@ article {
 .crud {
     max-width: 370px;
     margin: 0 auto;
+    text-align: left;
 }
 
 textarea {
@@ -65,4 +66,8 @@ textarea {
 
 .image-wrapper:hover .overlay {
     opacity: 0;
+}
+
+.image-center {
+    text-align: center;
 }

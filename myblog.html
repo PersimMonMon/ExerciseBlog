@@ -174,7 +174,7 @@
                 the structure blueprint that we will call for future uses.
                 Inside the function we include the objects that we need. Below are a few common schema field options you can use.
             </p>
-            <img src="blog images/schema-options.PNG">
+            <img class="img-center"src="blog images/schema-options.PNG">
             <p class="article-p">
                 Afterwards, we use mongoose.model() to create a schema. This function takes in two parameters, the name of collection and the schema.
             </p>
@@ -182,7 +182,7 @@
                 In conclusion: if you were to define const userSchema = mongoose.Schema ({
                 type: Number, required: true, min: 1}) and const User = mongoose.model({'user_data', userSchema}).
                 You could can then use User to call on query functions such as Model.find() and Model.updateOne(),
-                by replacing Model with 'User'. These are helper functions for CRUD operations. 
+                by replacing Model with 'User'. Those are helper functions for CRUD operations. 
             </p> 
         </article>
 
@@ -191,4 +191,13 @@
             <img class="answer" src="blog images/schema-practice.PNG">
             <div class="overlay"></div>
         </div>
+
+        <article>
+            <h2>How to create object in Database</h2>
+            <ol>
+                <li>Create constant that takes in query</li>
+                <li>Use async to await creation of object in database</li>
+                <li>Save the database</li>
+            </ol>
+        </article>
 </body>
