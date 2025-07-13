@@ -193,7 +193,7 @@
         </div>
 
         <article>
-            <h2>How to create object in Database (POST)</h2>
+            <h2>Create function for POST in model</h2>
             <ol>
                 <li>Use async that takes in query as parameters.</li>
                 <li>Create constant with parameters using key and value pairs</li>
@@ -201,4 +201,24 @@
             </ol>
         </article>
         <img src="blog images/model-post.PNG">
+
+        <article>
+            <h2>Writing the Get methods </h2>
+            <p  class="article-p">
+            Usually for get methods we have one that retrieves information based on a 
+            specific category or by id. The former case is done by getting information from
+            the query (req.query), this acts as our filter. For example, when a person types
+            information inside a textbox, it will appear on the URL. More specifically, it will 
+            appear on the query portion of the URL like /exercises/3000?squat=120.
+            </p>
+            <p class="article-p">
+            The latter case is used when we're trying to access a specific existing record, usually by its ID.
+            This is done through route parameters (req.params), not through query. For example,
+            the URL would be /exercises/:id, where id holds a unique identifier.
+            </p>
+            <p class="article-p">
+            The req.query is used to filter objects. Whereas the req.params is used to access
+            specific resources using an ID in the URL path. 
+            </p>
+        </article>
 </body>
